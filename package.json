@@ -1,0 +1,32 @@
+{
+  "name": "downloadable",
+  "version": "1.0.0",
+  "description": "check if url downloadable before download",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wahengchang/downloadable.git"
+  },
+  "keywords": [
+    "check",
+    "url",
+    "download",
+    "downloadable",
+    "checker"
+  ],
+  "author": "Peter Chang <wahengchang@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahengchang/downloadable/issues"
+  },
+  "homepage": "https://github.com/wahengchang/downloadable#readme",
+  "dependencies": {
+    "url-valid": "^0.3.0"
+  },
+  "devDependencies": {
+    "should": "^11.1.1"
+  }
+}

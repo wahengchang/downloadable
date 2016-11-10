@@ -1,0 +1,9 @@
+node_modules
+dump
+.tmp
+.*swp
+*.log
+*.zip
+*.pyc
+.sass-cache
+coverage
