@@ -14,18 +14,19 @@ $ npm install --save downloadable
 ## Test
 
 ```
-$ mocha test.js
+$ npm test
 ```
 
 
 ## Usage
 
 ```js
-    ## Usage
+    const downloadable = require("downloadable");
+    const imageUrl = 'https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png'
 
-    var downloadable = require("downloadable");
-
-    downloadable(badLink).then(function(){
+    downloadable(imageUrl).then(function(headers){
+      console.log(headers['content-type'])
+      console.log(headers['content-length'])
       // link is downloadable, do something ....
     },function(err){
       // link is not downloadable, do something else ....

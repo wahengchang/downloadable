@@ -4,7 +4,7 @@
   "description": "check if url downloadable before download",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,8 @@
     "url": "https://github.com/wahengchang/downloadable/issues"
   },
   "homepage": "https://github.com/wahengchang/downloadable#readme",
-  "dependencies": {
-    "url-valid": "^0.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "should": "^11.1.1"
+    "jest": "^23.6.0"
   }
 }

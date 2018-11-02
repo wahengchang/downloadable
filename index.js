@@ -1,17 +1,28 @@
-var valid = require('url-valid');
+const urlParser = require('url');
+const http = require('http');
 
-module.exports = function(url) {
+const valid = function(url) {
+    const urlObj = urlParser.parse(url)
+    const options = {
+        host : urlObj.host,
+        path: urlObj.path,
+        method: 'HEAD'
+    }
     return new Promise(function(resolve, reject) {
-        valid(url, function(err, valid) {
-            if (err) {
-                reject(err);
-            } else {
-                if (valid) {
-                    resolve();
-                } else {
-                    reject("linke is not downloadable");
-                }
-            }
+        const req = http.request(options);
+        req.end();
+        req.on('error', (err) => {
+            return reject(err)
         });
+        req.once('response', (res) => {
+            const {headers} = res
+            if(headers['content-type']){
+                return resolve(headers)
+            }
+
+            return reject('header has no content-type')
+        });        
     });
 };
+
+module.exports = valid
