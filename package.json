@@ -1,6 +1,6 @@
 {
   "name": "downloadable",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "check if url downloadable before download",
   "main": "index.js",
   "scripts": {
