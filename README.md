@@ -1,6 +1,8 @@
 # downloadable
 
-check if url downloadable before download.
+Check if url downloadable before download. 
+ - resolve a promise with the HTTP headers when given URL is downloadable (should have 'content-type' and 'content-length')
+ - reject a promise with error message when given URL is not downloadable
 
 [![NPM](https://nodei.co/npm/downloadable.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/downloadable)
 
