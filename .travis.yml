@@ -6,10 +6,11 @@ install:
 script:
   - npm test
   - rm -f -R node_modules
+  - npm version patch
 
 deploy:
   provider: npm
   email: ben@example.com
   api_key: $NPM_TOKEN
-  on:
-    tags: true
+after_deploy:
+  - git push origin master
