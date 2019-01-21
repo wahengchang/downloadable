@@ -11,7 +11,7 @@ script:
 
 deploy:
   provider: npm
-  email: ben@example.com
+  email: $NPM_EMAIL
   api_key: $NPM_TOKEN
 after_deploy:
   - git push origin master
