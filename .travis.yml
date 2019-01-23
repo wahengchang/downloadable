@@ -9,6 +9,7 @@ script:
   - git diff .
   - git checkout package-lock.json
   - npm version patch
+  - npm publish
 
 deploy:
   provider: npm
