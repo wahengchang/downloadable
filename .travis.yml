@@ -6,8 +6,8 @@ install:
 script:
   - npm test
   - rm -f -R node_modules
-  - git diff .
   - git checkout package-lock.json
+  - git diff .
   - npm version patch
   - npm publish
 
