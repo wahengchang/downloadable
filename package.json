@@ -1,5 +1,8 @@
 {
   "name": "downloadable",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.5",
   "description": "check if url downloadable before download",
   "main": "index.js",
