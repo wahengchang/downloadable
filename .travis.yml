@@ -3,6 +3,13 @@ node_js:
 - '8'
 install:
 - npm install
+before_deploy:
+  "npm patch"
+after_deploy:
+- git checkout master
+- git add .
+- git commit "published success"
+- git push origin master --tags
 deploy:
   tag: release
   skip_cleanup: true
