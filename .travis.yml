@@ -8,7 +8,6 @@ before_deploy:
 - git diff
 - npm version patch
 after_deploy:
-- git checkout master
 - git add .
 - git commit "published success"
 - git push origin master --tags
