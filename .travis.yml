@@ -3,22 +3,10 @@ node_js:
 - '8'
 install:
 - npm install
-before_deploy:
-- git checkout package-lock.json
-- git diff
-- npm version patch
-after_deploy:
-- git add .
-- git commit "published success"
-- git push origin master --tags
 deploy:
-  tag: release
-  skip_cleanup: true
-  all_branches: true
   provider: npm
   email: wahengchang@gmail.com
   api_key:
     secure: BCFOO2Xi4Xb//On3J2iVrqkkas37gRYhRbTlY3STZwOeZ8rhYn012n6xuzwNteWEjCjeWhdb50RB9B2F6WxN7rbDl/XQh3PtuCn02/e/CdsGSOik48lqB/cOyk0pB7KvyHOsTheGaDej3+RpNeUqAD12VTd143rZcoMSPiseHwgv/yEfvnTRPoawsqvQXPYR6qmUwHUz0R8ZzI+ioH86+a9TFKwewlNkfL0HjIKXJgS/815MoJbZ4ntUyYcAyy3BEw4rcMjtRdBi9yaLoJkpk0jGgoZH9CM9t9vkdPYE3vwIEXFpxHl+3ybv+/Ux3PEO7Zu4SxTcaepiDgNvZL011GMBbWUmPi/gSd42Kmgk1GowmWwrWQkjZEWZxXIkPT+2OZvXp8POlObnl13HVLsasxihCBunN/S1wi/MORM+TcudVX+D9yBuOj2CJds1sZ3OHt2KXu1DJTEJa097GoBx/Ayj/M4gxykdSTe4EDdr6gnrIZl0INZHzIjOF09gNcUCA520H+pULC96ndPFxHJx1lICcgdQ06wa+WtlCUSExPgSoHJfAAHDhxaE3F88q1lTZRJO0QHoPYoNIKnxl7hBlMWUQJmwRnJAvNUfnCoXkiYuVTn5Udw+M02rtMpxP11WAUPGx+y/IXqvF4kew3cm9Iumfb6zpcTMy5qe9pkfqiU=
   on:
     tags: true
-    repo: wahengchang/downloadable
