@@ -4,7 +4,9 @@ node_js:
 install:
 - npm install
 before_deploy:
-  "npm version patch"
+- git checkout package-lock.json
+- git diff
+- npm version patch
 after_deploy:
 - git checkout master
 - git add .
@@ -21,4 +23,3 @@ deploy:
   on:
     tags: true
     repo: wahengchang/downloadable
-
